@@ -1,10 +1,9 @@
-
 <h3>トップページ</h3>
   <div class="container">
     <% @memos.each do |m|%>
     <div class="col-sm-4">
         <div class="panel panel-success">
-            <div class="panel-heading"><%= m.title %></div>
+            <div class="panel-heading"><%= m.title %> <a href="/memos/<%= m.id %>" data-method="delete">削除</a> <a href="/memos/<%= m.id %>/edit">編集</a></div>
             <div class="panel-body">
                 <%= m.body %>
             </div>
