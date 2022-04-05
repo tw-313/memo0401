@@ -1,13 +1,15 @@
 class MemosController < ApplicationController
   def index
     @memos = Memo.all
+    
   end
 
   def new
+    @categories = Category.all
   end
 
   def create
-    Memo.create(title:params["memos"]["title"],body:params["memos"]["body"])
+    Memo.create(title:params["memos"]["title"],body:params["memos"]["body"],category_id:params["memos"]["category_id"])
     redirect_to "/"
   end
 

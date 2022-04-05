@@ -1,5 +1,4 @@
-<h3>トップページ</h3>
-  <div class="container">
+<h1><%= @category.name%>'s memo</h1>
     <% @memos.each do |m|%>
     <div class="col-sm-4">
         <div class="panel panel-success">
@@ -17,5 +16,3 @@
         </div>
     </div>
   <% end %>
-  </div>
-    
